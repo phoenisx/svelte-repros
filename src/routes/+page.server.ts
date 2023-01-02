@@ -1,7 +1,7 @@
 import data from '../dummy.json';
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 
-export const load: PageLoad = function () {
+export const load: PageServerLoad = function () {
 	return new Promise((res) => {
 		setTimeout(() => {
 			res({ data });

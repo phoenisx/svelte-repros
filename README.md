@@ -1,19 +1,38 @@
-# Issues with SvelteKit
+# create-svelte
 
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Issue I:
+## Creating a project
 
-**SvelteKit is not able to render the scripts in <svelte:head> when CSP is enabled**
+If you're seeing this, you've probably already done this step. Congrats!
 
-- Uncomment the CSP config in svelte.config.js
-- Build/Compile the project and serve.
-- The Scripts in the header won't run
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-## Issue 2
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-**Mixes Component props inside to passed JSON data in from +page.server.ts**
+## Developing
 
-- Keep prerender=true, and import a JSON data and return from page.server load function
-- If this data is immediately used by a component which has non-serializable props like a function,
-  the ssr compilation fails
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

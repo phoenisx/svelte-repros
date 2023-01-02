@@ -1,14 +1,14 @@
 [
-   {
-      "id": "1",
-      "value": "foo"
-   },
-   {
-      "id": "2",
-      "value": "boo"
-   },
-   {
-      "id": "3",
-      "value": "bazz"
-   }
+  {
+    "id": "1",
+    "value": "foo"
+  },
+  {
+    "id": "2",
+    "value": "boo"
+  },
+  {
+    "id": "3",
+    "value": "bazz"
+  }
 ]

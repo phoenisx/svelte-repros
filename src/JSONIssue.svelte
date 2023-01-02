@@ -1,9 +1,12 @@
-<script lang="ts">
-   export let id: string;
-   export let value: string;
-   export let onUpdate: (id: string) => void;
 
-   const handleChange = (e: Event) => {
+<script>
+// @ts-nocheck
+
+   export let id;
+   export let value;
+   export let onUpdate;
+
+   const handleChange = (e) => {
       e.preventDefault();
       onUpdate && onUpdate(id);
    }
