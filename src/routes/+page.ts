@@ -1,3 +1,10 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+import data from '../dummy.json';
+import type { PageLoad } from './$types';
+
+export const load: PageLoad = function () {
+	return new Promise((res) => {
+		setTimeout(() => {
+			res({ data });
+		}, 500);
+	});
+};

@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import JsonComponent from './JsonComponent.svelte';
+
+	// export let data: PageData;
 </script>
 
 <svelte:head>
@@ -26,6 +29,7 @@
 	</h2>
 
 	<Counter />
+	<JsonComponent />
 </section>
 
 <style>
