@@ -1,10 +1,7 @@
-import data from '../dummy.json';
-import type { PageServerLoad } from './$types';
+import { error } from '@sveltejs/kit';
 
-export const load: PageServerLoad = function () {
-	return new Promise((res) => {
-		setTimeout(() => {
-			res({ data });
-		}, 500);
-	});
-};
+export const actions = {
+  default: async () => {
+    throw error(500, { message: 'Failed' });
+  }
+}
